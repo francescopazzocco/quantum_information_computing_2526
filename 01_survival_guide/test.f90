@@ -8,7 +8,7 @@ program test
     open(1, file = 'error.txt', status = 'old')
     do ii=1, 32
         jj = ii
-        read(1, '(A)') message
+        read(1, 'A') message
         print*, trim(message)
     end do
 
