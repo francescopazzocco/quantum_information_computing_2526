@@ -31,6 +31,7 @@ The terminal is the basic tool to handle computations on your PC/on a cluster. E
 - `ls <PATH>` prints on terminal the content of the folder reached by the path;
 - `cat <filename>` prints on terminal the content of a file;
 - `rm <file_name>` deletes the file;
+- `rm -r <dir_name>` deletes the directory;
 - `cp <original_PATH> <destination_PATH>` copies a file from a PATH to another;
 - `mv <original_PATH> <destination_PATH>` moves a file from a PATH to another. It is also used for renaming files;
 - `export <VARIABLE_NAME>=<value>` sets the value of an environmental variable, that can be later accessed through the terminal. To access those variables in terminal use the syntax `${<VARIABLE_NAME>}`;
@@ -50,7 +51,27 @@ You can always use `<command> -h` or `man <command>` to have additional informat
     - Prints the environmental variable on terminal;
     - Prints the content of the folder on terminal;
     - Goes back to the previous folder;
-    - Prints the file `error.txt` on terminal.
+    - Prints the file `error.txt` on terminal;
+    - Remove the folder you created.
+</details>
+
+## Creating a key pair
+
+Key pairs are used to authenticate and securely communicate with trusted services without requiring a password. They can be created and used in different contexts. A key is associated with the device it is stored on, and it can be linked to one or (though less securely) multiple services.
+
+These are the steps to create a key pair that will be used later. The steps are the same, though slightly different, in Windows/Linux/MacOs 
+
+- `ssh-keygen -t ed25519 -C "key_identifier"` it creates the public/private key pairs 
+- `Start-Service ssh-agent` Windows command
+  `eval "$(ssh-agent -s)"` Ubuntu command
+- `ssh-add $env:C:\Users\<user_name>\.ssh\name_of_the_key` Windows command
+  `ssh-add ~/.ssh/id_ed25519` Ubuntu command
+
+Now the key is ready to be used. Check which files have been created in the `.ssh` folder.
+
+<details>
+  <summary>Exercise 2</summary>
+  Following the previous steps, create a key pair.
 </details>
 
 ## Git, GitHub and GitLab
@@ -58,11 +79,12 @@ You can always use `<command> -h` or `man <command>` to have additional informat
 Coding in the scientific community can be tough. Multiple people working at the same time on the same codebase, implementing multiple features. For this (and many other) reason we need to implement a version control that enables us to work on the same codebase at the same time.
 Git lets you do that, and GitHub/GitLab are online services to host your code. This repository is indeed on GitLab. Here are some important commands for handling git workflow:
 
-- `git clone <repository>` let you make a copy of the repository held online;
-- `git fetch <branch>` let you update the branch to the latest version online;
-- `git add <filename>` add the file to the files ot be committed later. DO NOT USE `git add .` since it will add all the files. At most you can use `git add -u .`, that adds all the files that were already present;
+- `git clone <repository>` lets you make a copy of the repository held online;
+- `git fetch (<branch>)` lets you update the local Git repository with the remote the latest version online; no changes will occurr in your local branch
+- `git pull` updates your local branch to the content of the remote branch
+- `git add <filename>` adds the file to the files ot be committed later. DO NOT USE `git add .` since it will add all the files. At most you can use `git add -u .`, that adds all the files that were already present;
 - `git commit -m "<message>"` commits your changes adding them to the history;
-- `git push` push the commits to the online repository;
+- `git push` pushes the commits to the online repository;
 - `git diff` prints at terminal the current differences with the last commit;
 - `git checkout <branch_name>` changes branch;
 - `git checkout -b <branch_name>` changes branch creating a new one;
@@ -72,7 +94,8 @@ The merges to the principal branch of the project can be controlled through merg
 
 <details>
   <summary>Exercise 2</summary>
-
+  
+    - Add the public key you created in the previous exercise to your github account
     - Clone this repository (if you didn't do it already)
     - Create your branch named `student/<your_surname>`
     - Add, commit and push `hello_world.sh`
