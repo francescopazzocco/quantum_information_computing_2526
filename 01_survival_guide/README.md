@@ -79,9 +79,9 @@ Now the key is ready to be used. Check which files have been created in the `.ss
 Coding in the scientific community can be tough. Multiple people working at the same time on the same codebase, implementing multiple features. For this (and many other) reason we need to implement a version control that enables us to work on the same codebase at the same time.
 Git lets you do that, and GitHub/GitLab are online services to host your code. This repository is indeed on GitLab. Here are some important commands for handling git workflow:
 
-- `git clone <repository>` lets you make a copy of the repository held online;
-- `git fetch (<branch>)` lets you update the local Git repository with the remote the latest version online; no changes will occurr in your local branch
-- `git pull` updates your local branch to the content of the remote branch
+- `git clone <repository>` makes a copy of the repository held online;
+- `git fetch (<branch>)` updates the local Git repository (branch) with the latest version online; no changes will occurr in your local branch;
+- `git pull` updates your local branch to the content of the remote branch;
 - `git add <filename>` adds the file to the files ot be committed later. DO NOT USE `git add .` since it will add all the files. At most you can use `git add -u .`, that adds all the files that were already present;
 - `git commit -m "<message>"` commits your changes adding them to the history;
 - `git push` pushes the commits to the online repository;
@@ -94,7 +94,7 @@ The merges to the principal branch of the project can be controlled through merg
 
 <details>
   <summary>Exercise 2</summary>
-  
+
     - Add the public key you created in the previous exercise to your github account
     - Clone this repository (if you didn't do it already)
     - Create your branch named `student/<your_surname>`
