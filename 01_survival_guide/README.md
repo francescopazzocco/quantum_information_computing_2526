@@ -1,6 +1,6 @@
 # A physicist survival guide to computing
 
-This week we do not have particular tasks at hand, so we will cover the introduction to basis tasks that are in general important to survive this course and a computational physicist life.
+This week we will cover the introduction to basis tasks that are in general important to survive this course and a computational physicist life.
 
 ## Code editor: VSCODE
 
