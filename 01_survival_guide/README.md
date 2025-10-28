@@ -9,14 +9,18 @@ This week we do not have particular tasks at hand, so we will cover the introduc
 - You can find the [basic commands online](https://code.visualstudio.com/docs/introvideos/basics);
 - Customize your experience with extensions. I suggest the followings:
   - Modern fortran
-  - Fortran Intellisense
-  - Intellicode
   - Python
   - Markdown preview
   - Remote - ssh
   - Latex workshop
+  - GitLens
+
+- Use AI assistants with care:
+  - Fortran Intellisense
+  - Intellicode
   - autoDocstring
-  - Github lenses
+  - Copilot
+  - ....
 
 You can also open terminals from VSCode, to run your jobs from there.
 
