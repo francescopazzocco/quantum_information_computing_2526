@@ -22,7 +22,11 @@ This week we do not have particular tasks at hand, so we will cover the introduc
   - Copilot
   - ....
 
-You can also open terminals from VSCode, to run your jobs from there.
+You can also open Linux/Ubuntu terminals from VSCode, to run your jobs from there. For Windows:
+
+ - execute `wsl --install` in Powershell
+ - Test it: open Ubuntu from the Start menu
+ - In VS Code open a new remote connextion "Remote-WSL: New Window"
 
 ## The terminal
 
