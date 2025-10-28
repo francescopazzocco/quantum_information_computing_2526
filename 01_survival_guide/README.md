@@ -43,7 +43,6 @@ The terminal is the basic tool to handle computations on your PC/on a cluster. E
 - `cp <original_PATH> <destination_PATH>` copies a file from a PATH to another;
 - `mv <original_PATH> <destination_PATH>` moves a file from a PATH to another. It is also used for renaming files;
 - `export <VARIABLE_NAME>=<value>` sets the value of an environmental variable, that can be later accessed through the terminal. To access those variables in terminal use the syntax `${<VARIABLE_NAME>}`;
-- `ssh-keygen` generates a couple of public/private ssh keys. Essential for working remotely;
 - `ssh <username>@<address>` lets you log in with ssh to a given remote machine. You can later on configure VSCode to do this for you with the remote extension.
 
 You can always use `<command> -h` or `man <command>` to have additional informations on the command or on its optional arguments.
